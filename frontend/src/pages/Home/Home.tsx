@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 type Character = {
   id: number;
@@ -128,9 +129,12 @@ export default function Home() {
 
         {/* Botón crear personaje abajo */}
         <div className="p-4 border-t border-gray-700">
-          <button className="w-full bg-purple-600 py-2 rounded-lg hover:bg-purple-500">
+          <Link
+            to="/creator"
+            className="block w-full bg-purple-600 py-2 rounded-lg hover:bg-purple-500 text-center"
+          >
             Crear personaje
-          </button>
+          </Link>
         </div>
       </div>
     </div>

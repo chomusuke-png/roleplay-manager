@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import CharacterCreator from "./pages/CharacterCreator";
+import Home from "./pages/Home/Home";
+import CharacterCreator from "./pages/CharacterCreator/CharacterCreator";
 
 function App() {
   return (

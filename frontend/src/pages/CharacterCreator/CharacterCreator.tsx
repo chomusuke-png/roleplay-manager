@@ -1,5 +1,5 @@
 import { useForm, type SubmitHandler } from "react-hook-form";
-import { PLAYABLE_RACES } from "../../data/races"; // Asumiendo que creaste el archivo
+import { PLAYABLE_RACES } from "../../data/races";
 
 /**
  * Interfaz que define la estructura de datos del formulario de personaje.
@@ -36,7 +36,7 @@ export default function CharacterCreator() {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-900 text-white flex justify-center py-10 px-4">
+    <div className="min-h-screen bg-bg-main text-text-main flex justify-center py-10 px-4">
       <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-3xl space-y-8">
         
         <h1 className="text-3xl font-bold text-center mb-6">Nuevo Personaje</h1>
@@ -92,7 +92,7 @@ export default function CharacterCreator() {
 
         {/* Botón de Guardar */}
         <div className="flex justify-end">
-          <button type="submit" className="bg-green-600 hover:bg-green-500 px-6 py-2 rounded-lg">
+          <button type="submit" className="bg-green-600 hover:bg-green-500 px-6 py-2 rounded-lg cursor-pointer">
             Crear Personaje
           </button>
         </div>

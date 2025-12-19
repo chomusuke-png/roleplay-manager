@@ -1,7 +1,28 @@
 @import "tailwindcss";
 
+@theme {
+  /* --- COLORES --- */
+  --color-primary: #9333ea;
+  --color-primary-hover: #7e22ce;
+  --color-secondary: #10b981;
+  --color-danger: #ef4444;
+  --color-bg-main: #18181b;
+  --color-bg-card: #27272a;
+  --color-bg-highlight: #3f3f46;
+  --color-text-main: #f4f4f5;
+  --color-text-muted: #a1a1aa;
+
+  /* --- TIPOGRAFÍAS --- */
+  --font-display: "Oswald", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
 @layer components {
   .input {
-    @apply bg-zinc-800 border border-zinc-600 rounded-md px-3 py-2 w-full text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-500;
+    @apply bg-bg-card border border-zinc-600 rounded-md px-3 py-2 w-full text-text-main placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-primary;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-hover text-white font-bold py-2 px-4 rounded transition-colors;
   }
 }

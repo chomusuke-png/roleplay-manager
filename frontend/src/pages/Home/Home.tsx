@@ -47,7 +47,7 @@ export default function Home() {
   const [hoveredCharacter, setHoveredCharacter] = useState<number | null>(null);
 
   return (
-    <div className="grid grid-cols-12 h-screen bg-gray-900 text-white">
+    <div className="grid grid-cols-12 h-screen bg-bg-main text-text-main">
       {/* Sidebar de Campañas */}
       <div className="col-span-3 flex flex-col border-r border-gray-700">
         {/* Lista de campañas */}
@@ -66,7 +66,7 @@ export default function Home() {
                   key={c.id}
                   className={`p-3 rounded-lg cursor-pointer transition ${
                     hoveredCampaign === c.id || isActive
-                      ? "bg-indigo-600"
+                      ? "bg-primary-hover"
                       : "bg-gray-800 hover:bg-gray-700"
                   }`}
                   onMouseEnter={() => setHoveredCampaign(c.id)}
@@ -108,7 +108,7 @@ export default function Home() {
                   key={ch.id}
                   className={`p-4 rounded-xl cursor-pointer transition ${
                     hoveredCharacter === ch.id || isActive
-                      ? "bg-purple-600"
+                      ? "bg-primary-hover"
                       : "bg-gray-800 hover:bg-gray-700"
                   }`}
                   onMouseEnter={() => setHoveredCharacter(ch.id)}
@@ -131,7 +131,7 @@ export default function Home() {
         <div className="p-4 border-t border-gray-700">
           <Link
             to="/creator"
-            className="block w-full bg-purple-600 py-2 rounded-lg hover:bg-purple-500 text-center"
+            className="block w-full bg-primary py-2 rounded-lg hover:bg-primary-hover text-center"
           >
             Crear personaje
           </Link>
